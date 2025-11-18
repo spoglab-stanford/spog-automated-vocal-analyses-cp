@@ -1,7 +1,7 @@
 # Automated Vocal Analyses Over Child-Centered Recordings to Predict Speech-Language Development
 
 This repo is associated with the paper "Connecting preschoolers’ spontaneous speech patterns to future language skills: A three-year concurrent and longitudinal cohort study of canonical proportion as a
-developmental index"
+developmental index" (under review)
 
 ## Overview
 
