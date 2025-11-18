@@ -1,10 +1,11 @@
 # Automated Vocal Analyses Over Child-Centered Recordings to Predict Speech-Language Development
 
-This repo is associated with the paper "Can automated vocal analyses over child-centered audio recordings be used to predict speech-language development?"
+This repo is associated with the paper "Connecting preschoolers’ spontaneous speech patterns to future language skills: A three-year concurrent and longitudinal cohort study of canonical proportion as a
+developmental index"
 
 ## Overview
 
-Daylong (~16 hour) naturalistic child speech audio recordings (N=130) of children at age 3 were chopped into 500ms clips based on vocalization timestamps, then processed through a deep learning model to classify each clip into their respective category (0: canonical, 1: non-canonical, 2: crying, 3: laughing, 4: junk). After classification, statistical analyses were run to determine canonical proportion as a predictor of various speech-language assessments of the same children 1 year later. For more information on model architecture, please see https://anonymous.4open.science/r/child-speech-maturity-5607/. For more information on the dataset, please contact author directly. 
+Daylong (~16 hour) naturalistic child speech audio recordings (N=155, the exact # varied by time point) of children at age 3 and 4 were chopped into 500ms clips based on vocalization timestamps, then processed through a deep learning model to classify each clip into their respective category (0: canonical, 1: non-canonical, 2: crying, 3: laughing, 4: junk). After classification, statistical analyses were run to determine canonical proportion as a predictor of various speech-language assessments of the same children concurrently and 1 year later at 4 and 5. For more information on model architecture, please see Zhang et al. (2025) *Proceedings of Interspeech*. For more information on the dataset (which is too large to share publicly on this platform, but is available for re-use), please contact author directly. 
 
 Key Terms:
 CHN = Key Child Near vocalization
@@ -52,7 +53,7 @@ To apply this dataflow:
 
 1. Run script 1.1 on naturalistic raw audio recording with corresponding .its file.
 2. Run script 1.2 and chop the vocalizations into 500ms clips so the model can process.
-3. Use deep learning model (see https://anonymous.4open.science/r/child-speech-maturity-5607/) to classify clips into respective labels.
+3. Use deep learning model to classify clips into respective labels.
 4. Calculate canonical proportion for each child based on output (Canonical Proportion = Canonical/(Canonical + Non-Canonical))
 5. Use speech-language scores and canonical proportion measures to fit statistical models using script 2.1.
 
