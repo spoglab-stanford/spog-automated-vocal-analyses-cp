@@ -67,6 +67,25 @@ Models were created for ALL speech-language assessments that were available at t
 ## 3. Data Visualizations
 The tpX_tpY_visualizations.ipynb files contain weighted scatterplot graphs with a model fit line for the weighted and scaled models for canonical proportion at TPX on speech language assessment at TPY.
 
+### 3.1 tp1_tp1_visualizations.ipynb
+- At Timepoint 1 on Timepoint 1, visualizations for:
+    - GFTA
+    - EVT
+  
+### 3.2 tp1_tp2_visualizations.ipynb
+- At Timepoint 1 on Timepoint 2, visualizations for:
+    - PPVT-4
+    - CTOPP-2
+    - Real Word Repetition Accuracy
+    - Nonword Repetition Accuracy
+      
+### 3.3 tp2_tp3_visualizations.ipynb
+- At Timepoint 2 on Timepoint 3, visualizations for:
+    - GFTA
+    - EVT
+    - CTOPP
+    - SAILS
+
 These files (3.1, 3.2, and 3.3) take in the output files from 2.1, 2.2, and 2.3 respectively to create these plots (see paper for figures).
 
 ## Procedure
