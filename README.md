@@ -88,13 +88,39 @@ The tpX_tpY_visualizations.ipynb files contain weighted scatterplot graphs with 
 
 These files (3.1, 3.2, and 3.3) take in the output files from 2.1, 2.2, and 2.3 respectively to create these plots (see paper for figures).
 
+Full dataset + classifier outputs are not included due to size (~1M+ clips). Available upon request.
+
 ## Procedure
 
 To apply this dataflow:
 
-1. Run script 1.1 on naturalistic raw audio recording with corresponding .its file.
-2. Run script 1.2 and chop the vocalizations into 500ms clips so the model can process.
-3. Use deep learning model to classify clips into respective labels.
-4. Calculate canonical proportion for each child based on output (Canonical Proportion = Canonical/(Canonical + Non-Canonical))
-5. Use speech-language scores and canonical proportion measures to fit statistical models using script 2.1.
+1. **Extract CHN Clips** — run `get_CHN_clips.py`  
+   - Extracts child vocalization clips from raw daylong audio using timestamps from the `.its` file.  
+   - **Input:** raw audio + `.its` file  
+   - **Output:** CHN audio clips + metadata  
+
+2. **Chop Clips Into 500ms Segments** — run `chop_CHN_clips.py`  
+   - Splits each CHN clip into 500ms utterances and stores clip-level metadata.  
+   - **Input:** CHN clips  
+   - **Output:** 500ms utterances + metadata  
+
+3. **Classify Utterances** — apply deep learning model  
+   - Assigns a label to each utterance (canonical / non-canonical / other).  
+   - **Input:** 500ms utterances  
+   - **Output:** classification labels per utterance  
+
+4. **Compute Canonical Proportion (CP)** — compute using classifier output  
+   - Calculate CP per child per timepoint: CP = Canonical / (Canonical + Non-Canonical).  
+   - **Input:** utterance-level labels  
+   - **Output:** CP values per child per timepoint  
+
+5. **Fit Statistical Models** — run appropriate `cp_models_*` notebook  
+   - Tests CP as predictor of speech-language outcomes (baseline, expanded, weighted, scaled models).  
+   - **Input:** CP values + assessment scores  
+   - **Output:** regression model results  
+
+6. **Create Visualizations** — run matching `tp*_tp*_visualizations.ipynb` notebook  
+   - Generates weighted scatterplots using regression outputs.  
+   - **Input:** model outputs  
+   - **Output:** publication-ready visualizations  
 
