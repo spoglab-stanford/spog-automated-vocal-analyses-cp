@@ -27,13 +27,9 @@ The following files were used for preprocessing of audio and statistical analysi
     - duration of clip
 
 ## 2. Modeling and Statistical Analysis
-### 2.1 cp_models.ipynb
-- includes mutliple linear regression models and statistical analysis for canonical proportion as predictor of the following speech-language measures
-    - GFTA-2
-    - PPVT-4
-    - CTOPP-2
-    - Real Word Repetition Accuracy
-    - Nonword Repetition Accuracy
+The cp_models_tpX_tpY_(longitudinal/concurrent).ipynb files contain mutliple linear regression models and statistical analysis for canonical proportion (CP) at Timepoint X as predictor of the following speech-language measures at Timepoint Y.
+
+All analyses adhere to the following format:
 - Baseline model
     - demographic variables as predictors
         - maternal education
@@ -47,6 +43,32 @@ The following files were used for preprocessing of audio and statistical analysi
 - Scaled model
     - centers and scaled outcome variable to interpret results relative to each other
  
+Models were created for ALL speech-language assessments that were available at that specific timepoint.
+
+### 2.1 cp_models_tp1_tp1_concurrent.ipynb
+- At Timepoint 1 on Timepoint 1, models were created for the following speech/language assessments:
+    - GFTA
+    - EVT
+ 
+### 2.2 cp_models_tp1_tp2_longitudinal.ipynb
+- At Timepoint 1 on Timepoint 2, models were created for the following speech/language assessments:
+    - PPVT-4
+    - CTOPP-2
+    - Real Word Repetition Accuracy
+    - Nonword Repetition Accuracy
+
+### 2.3 cp_models_tp2_tp3_longitudinal.ipynb
+- At Timepoint 2 on Timepoint 3, models were created for the following speech/language assessments:
+    - GFTA
+    - EVT
+    - CTOPP
+    - SAILS
+ 
+## 3. Data Visualizations
+The tpX_tpY_visualizations.ipynb files contain weighted scatterplot graphs with a model fit line for the weighted and scaled models for canonical proportion at TPX on speech language assessment at TPY.
+
+These files (3.1, 3.2, and 3.3) take in the output files from 2.1, 2.2, and 2.3 respectively to create these plots (see paper for figures).
+
 ## Procedure
 
 To apply this dataflow:
