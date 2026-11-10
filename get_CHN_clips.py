@@ -87,7 +87,7 @@ if __name__ == "__main__":
 
     for csv_file in os.listdir(chn_dir):
         if csv_file.endswith("_CHN_timestamps.csv"):
-            # Extract child ID from the CSV filename (e.g., "688LTP1" from "688LTP1_CHN_timestamps.csv")
+            # Extract child ID from the CSV filename (e.g., "001TP1" from "001TP1_CHN_timestamps.csv")
             child_id = csv_file.split("_")[0]
             count += 1
             print(child_id)
