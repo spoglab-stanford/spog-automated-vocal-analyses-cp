@@ -40,13 +40,12 @@ Columns:
 - `0`, `1` — number of 500ms clips classified canonical (0) and non-canonical (1); `num_clips` = canonical + non-canonical, the CP denominator (used as the model weight)
 - `age_mos`, `gender`, `Maternal_Education_Level` — demographic covariates
 - `canonical_proportion` — CP = canonical / (canonical + non-canonical)
-- assessment columns (`GFTA_Standard`, `EVT_Standard`, `PPVT_Standard`, `CTOPP_Elision_Scaled`, `avg_rwr_accuracy`, `avg_nwr_accuracy`, `SAILS_ProportionTestCorrect`) — scores available at that analysis's outcome timepoint
-- `*_scaled` columns, where present — pre-computed z-scored versions; the analysis code standardizes CP and outcomes in code (see `CHANGES_v2.md`) and does not rely on these
+- assessment columns (`GFTA_Standard`, `EVT_Standard`, `PPVT_Standard`, `CTOPP_Elision_Scaled`, `avg_rwr_accuracy`, `avg_nwr_accuracy`, `SAILS_ProportionTestCorrect`) — scores available at that analysis's outcome timepoint; all z-scoring is done in code
 
 Raw audio and clip-level classifier outputs are not included due to size (~1M+ clips).
 
 ## 3. Modeling and Statistical Analysis
-The `cp_models_*_v2.ipynb` notebooks contain multiple linear regression models and statistical analysis for canonical proportion (CP) at Timepoint X as predictor of speech-language measures at Timepoint Y. They reproduce the paper's Tables 4, 5, and 6 from the `data/` masters; shared code lives in `cp_models_common.py`, and `CHANGES_v2.md` documents how these v2 notebooks differ from the originally posted v1 notebooks (a CP-standardization correction that was incorporated into the published Table 4 at proofs).
+The `cp_models_*_v2.ipynb` notebooks contain multiple linear regression models and statistical analysis for canonical proportion (CP) at Timepoint X as predictor of speech-language measures at Timepoint Y. They reproduce the paper's Tables 4, 5, and 6 from the `data/` masters; shared code lives in `cp_models_common.py`.
 
 Run each notebook top to bottom from the repository root, or equivalently:
 
