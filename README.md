@@ -134,3 +134,5 @@ To apply this dataflow:
 
 Steps 1–4 require the raw audio and are included for transparency; steps 5–6 are fully reproducible from this repository alone.
 
+**Note on one data correction.** One child's gender was recorded incorrectly (as female) in the Timepoint 1 analysis dataframes; the `data/` files here carry the correction, so a few Table 4 and Table 5 cells differ in their final digits from the typeset tables (e.g., Table 4 EVT-2 scaled β 0.63 → 0.62). No signs or significance levels change.
+
