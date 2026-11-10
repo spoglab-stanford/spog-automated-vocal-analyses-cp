@@ -74,7 +74,7 @@ if __name__ == "__main__":
 
     for folder in os.listdir(chn_dir):
         folder_path = os.path.join(chn_dir, folder)
-        # Extract child ID from the CSV filename (e.g., "688LTP1" from "688LTP1_CHN_timestamps.csv")
+        # Extract child ID from the CSV filename (e.g., "001TP1" from "001TP1_CHN_timestamps.csv")
         child_id = folder_path.split("/")[-1].split("_")[0]
         print(child_id)
         # Skip hidden files like .DS_Store (common on macOS)

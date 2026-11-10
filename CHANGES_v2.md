@@ -45,7 +45,7 @@ because the sample grows from 116 to 122.
 
 GFTA-2 N = 117 (unchanged); EVT-2 N = 116 → **122**. All effects remain
 p < .001 (the EVT-2 effect is now slightly stronger). **Figure 3** is regenerated
-accordingly (`figure3_concurrent_v2.png`; GFTA β = 0.60, EVT β = 0.63, EVT panel
+accordingly (`figure3_concurrent_v2.png`; GFTA β = 0.60, EVT β = 0.62, EVT panel
 now 122 points).
 
 Tables 5 and 6 are unchanged. Two pre-existing typos in the typeset proof, also

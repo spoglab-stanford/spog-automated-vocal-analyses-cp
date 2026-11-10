@@ -4,7 +4,7 @@ figure3_concurrent_v2.py
 Regenerates Figure 3 (concurrent: CP at TP1 vs GFTA-2 and EVT-2 at TP1) with the
 corrected CP scaling: CP is z-scored over the FULL cohort (not the 117
 GFTA-complete subset), so the EVT-2 panel now includes all 122 children and the
-panel betas match the corrected Table 4 (GFTA 0.60, EVT 0.63).
+panel betas match the corrected Table 4 (GFTA 0.60, EVT 0.62).
 
 Usage:
     python figure3_concurrent_v2.py <tp1_tp1_master_with_scaled.csv> [out.png]
