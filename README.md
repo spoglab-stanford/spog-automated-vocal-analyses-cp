@@ -37,7 +37,7 @@ The `data/` directory contains the three analysis dataframes ("masters"), one pe
 
 Columns:
 - `child_id` — study-specific pseudonymous ID (`cp001`–`cp154`), consistent for the same child across the three files. These IDs are specific to this release and are not used in any other dataset.
-- `0`, `1` — number of 500ms clips classified canonical (0) and non-canonical (1); `num_clips` = canonical + non-canonical, the CP denominator (used as the model weight)
+- `0`, `1` — number of 500ms clips classified canonical (0) and non-canonical (1) (first two files); `num_clips` — their sum, the CP denominator, used as the model weight (last two files; the analysis code computes it from `0` + `1` where absent)
 - `age_mos`, `gender`, `Maternal_Education_Level` — demographic covariates
 - `canonical_proportion` — CP = canonical / (canonical + non-canonical)
 - assessment columns (`GFTA_Standard`, `EVT_Standard`, `PPVT_Standard`, `CTOPP_Elision_Scaled`, `avg_rwr_accuracy`, `avg_nwr_accuracy`, `SAILS_ProportionTestCorrect`) — scores available at that analysis's outcome timepoint; all z-scoring is done in code
